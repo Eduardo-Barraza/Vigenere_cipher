@@ -66,6 +66,25 @@ The keyword is repeated to match the length of the plaintext.
 Encrypt and Decrypt:
 
 For each character in the text, the corresponding shift value from the keyword is applied.
+
+Notes: 
+
+In both the Vigenère and Atbash cipher implementations, the line result = "" is used to initialize an empty string that will be used to build the final encrypted or decrypted message.
+
+Explanation of result = ""
+
+1. Initialization:
+result = "" initializes an empty string named result.
+This empty string will be used to accumulate the transformed characters as the cipher processes each character of the input text.
+2. Building the Result String:
+As the program iterates through each character in the input text (plaintext for encryption, ciphertext for decryption), it transforms each character according to the cipher's rules and appends the transformed character to the result string.
+This is typically done using a loop, such as a for loop.
+3. Accumulation:
+Within the loop, the program processes each character and then appends (+=) the transformed character to the result string.
+The += operator is used to concatenate the new character to the end of the existing result string.
+4. Final Result:
+By the end of the loop, result contains the complete transformed message, either encrypted or decrypted, depending on the direction of the transformation.
+The final result string is then returned or printed.
 For encryption, the shift is added.
 For decryption, the shift is subtracted.
 ASCII Handling:
